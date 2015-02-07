@@ -84,4 +84,4 @@ for idx in range(chunks_amount):
 			break
 
 print('====================\n\nTo assemble chunks into a single file, use the command:')
-print('ffmpeg -y -i %(path)s/%(filename)s.m3u8 -c copy %(path)s/%(filename)s.mpeg' % {'path': diroutput, 'filename': filename})
+print('ffmpeg -y -i %(path)s/%(filename)s.m3u8 -c copy -bsf:a aac_adtstoasc %(path)s/%(filename)s.mp4' % {'path': diroutput, 'filename': filename})
